@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* import font เพื่อใช้งาน */
+
+/* สามารถใช้ border: 1px solid red; เพื่อที่จะดูแต่ละส่วนได้ */
+/* transition คือ คำสั่งที่ทำให้มีความสมูทในการเปลี่ยน เช่น สีเดิมคือ ขาว แต่เมื่อ hover จะเปลี่ยนเป็นสีดำ ใส่ transition ไป 0.3s คือจะค่อยๆเปลี่ยนเป็นสีดำภายใน 0.3s */
+
+/* reset ค่าหน้ากระดาษและกำหนด font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* กล่องหัวข้อที่ใหญ่ที่สุด */
+.navbar {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 75px;
+  background-color: rgb(0, 59, 147);
+}
+
+/* ส่วนตกแต่งโลโก้ด้านซ้าย */
+/* ใช้ flex เพื่อให้จัดตำแหน่งกึ่งกลางได้ */
+.logo {
+  /* border: 1px solid red; */
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+/* กำหนดความยาวตัวเลือกด้านขวา */
+.nav {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+/* ใช้ flex เพื่อให้ต่อกันและจัดกึ่งกลาง */
+ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* border: 1px solid red; */
+  height: 73px;
+  gap: 2rem;
+  margin-right: 5rem;
+}
+/* กำหนดขนาด font | "none" คือไม่มีกลมๆด้านหน้า*/
+ul li {
+  list-style: none;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+/* เมื่อนำเมาส์ไปชี้จะขยายตัวอักษร */
+ul li:hover {
+  transform: scale(1.2);
+}
+/* กำหนดสี font | "none" คือไม่มีเส้นใต้ | font-weight คือ ความหนาตัวอักษร*/
+ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+/* เมื่อนำเมาส์ไปชี้จะเปลี่ยนสี */
+ul li a:hover {
+  color: rgb(0, 225, 255);
+}
